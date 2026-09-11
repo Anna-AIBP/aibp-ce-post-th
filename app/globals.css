@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --aibp-red:   #4B64AE; /* Indonesia Blue, per AIBP brand guide */
+  --aibp-dark:  #3C3838;
+  --aibp-gold:  #C9A84C;
+  --background: #ffffff;
+  --foreground: #3C3838;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-aibp-red:   var(--aibp-red);
+  --color-aibp-dark:  var(--aibp-dark);
+  --color-aibp-gold:  var(--aibp-gold);
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Safe area padding for notched phones */
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 16px); }
+.safe-top    { padding-top: env(safe-area-inset-top, 0px); }
+
+/* Tap feedback for every button — -webkit-tap-highlight-color above removes
+   the browser's default tap flash, so without this, taps have zero visual
+   response until whatever the tap triggered finishes loading. This makes
+   every button visibly "press" on touch, instantly, regardless of what it does. */
+button:not(:disabled) {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+button:not(:disabled):active {
+  transform: scale(0.96);
+  opacity: 0.85;
+}
+
+/* Prevent overscroll */
+html, body { overscroll-behavior: none; }
+
+/* Lucky Draw reel — replayed on every tick (via a changing `key`) so each
+   name swap gets a quick fade + slide instead of an abrupt jump cut. */
+@keyframes reel-fade {
+  0%   { opacity: 0; transform: translateY(-6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.reel-fade { animation: reel-fade 0.14s ease-out; }
+
+/* Winner card — pops in with a little overshoot instead of just appearing,
+   so the swap from the spinning reel feels like a deliberate reveal. */
+@keyframes reveal-pop {
+  0%   { opacity: 0; transform: scale(0.9); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.reveal-pop { animation: reveal-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); }

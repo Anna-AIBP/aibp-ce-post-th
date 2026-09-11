@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AIBP C&E Indonesia — Post-Conference Report</title>
+<style>
+  /* ============================================================
+     PHOTO SLOTS — how to add your own pictures
+     Anywhere you see a filename printed in small grey monospace text
+     inside a box (e.g. "photos/hero-1.jpg"), that's a photo slot.
+     1. Make a folder called "photos" next to this HTML file.
+     2. Save your image using EXACTLY that filename into that folder.
+     3. Refresh this page — the photo appears automatically, no editing
+        of this file required.
+     ============================================================ */
+  :root {
+    color-scheme: light;
+    --aibp-red: #4B64AE;   /* was Malaysia orange #EE963A — now Indonesia Blue, per brand guide */
+    --aibp-gold: #C9A84C;  /* unchanged — AIBP-wide secondary accent, not country-specific */
+    --aibp-dark: #3C3838;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; color: var(--aibp-dark); background: #fff; }
+  img { max-width: 100%; }
+  .wrap { max-width: 64rem; margin: 0 auto; }
+  .photo-slot { position: relative; overflow: hidden; background: #e5e7eb; }
+  .photo-slot .filename { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6px; font-family: monospace; font-size: 10px; color: #8b93a8; line-height: 1.5; }
+  .photo-slot img.real { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+</style>
+</head>
+<body>
+
+<div style="background:#fef9e7; color:#78350f; text-align:center; font-size:12px; font-weight:700; padding:8px 16px;">
+  Preview mockup — layout, type and spacing copied directly from the live my.aibp.sg/report component code, recoloured to Indonesia Blue. Stats, Speakers, Day 1, Day 2, Networking and Sponsors below are all real (from your Firebase exports + the ID_Speakers sheet data embedded there). Awards and Testimonials use the site's own real "still being finalised" placeholder since those results/quotes don't exist yet. Day 2 session times aren't in the data — sessions are shown in confirmed running order instead.
+</div>
+
+<!-- ===================== HERO ===================== -->
+<header style="position:relative; overflow:hidden; background:linear-gradient(to bottom right, #1a2450, #37489a, #8fa2d8); color:#fff;">
+  <div style="position:absolute; inset:0; background:rgba(16,20,42,0.7); clip-path:polygon(0 0, 42% 0, 16% 100%, 0% 100%);"></div>
+  <svg style="position:absolute; bottom:0; left:0; width:100%; height:80px; color:rgba(255,255,255,0.1);" viewBox="0 0 400 60" preserveAspectRatio="none" fill="currentColor">
+    <rect x="0" y="20" width="18" height="40"/><rect x="22" y="10" width="14" height="50"/><rect x="40" y="28" width="20" height="32"/>
+    <rect x="64" y="0" width="12" height="60"/><rect x="80" y="18" width="16" height="42"/>
+    <rect x="340" y="22" width="18" height="38"/><rect x="362" y="8" width="14" height="52"/><rect x="380" y="24" width="20" height="36"/>
+  </svg>
+  <div class="wrap" style="position:relative; z-index:10; padding:56px 20px 80px;">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:56px;">
+      <img src="https://images.squarespace-cdn.com/content/v1/6316ec4bc3127239ee7b0786/34cc06e3-f859-40f8-8c01-f758906ce1c9/AIBP+by+Industry+Platform+%28High+Res%29.png?format=300w" alt="AIBP" style="height:32px; object-fit:contain; filter:brightness(0) invert(1);">
+      <span style="font-size:11px; text-transform:uppercase; letter-spacing:0.15em; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); border-radius:999px; padding:4px 14px; font-weight:700;">Post-Conference Report</span>
+    </div>
+    <h1 style="font-size:44px; font-weight:800; line-height:1.15; max-width:640px; margin:0 0 16px; letter-spacing:-0.01em;">AIBP Conference &amp; Exhibition Indonesia 2026</h1>
+    <p style="font-size:15px; color:rgba(255,255,255,0.8); font-weight:600; margin:0;">26 – 27 August 2026 · Jakarta, Indonesia</p>
+    <!-- Theme tagline / hero description intentionally left out — that copy doesn't exist anywhere yet (same gap as Awards/Sessions below). Add here once written. -->
+  </div>
+</header>
+
+<!-- ===================== ENDORSEMENTS ===================== -->
+<div class="wrap" style="position:relative; z-index:10; padding:0 20px; margin-top:-40px;">
+  <div style="background:#fff; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.08); border:1px solid #f3f4f6; padding:28px 32px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:24px;">
+    <div>
+      <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af; font-weight:700; margin:0 0 12px;">Endorsed By</p>
+      <div class="photo-slot" style="height:48px; width:140px; border-radius:6px;"><div class="filename">photos/endorsed-by.png</div><img class="real" src="photos/endorsed-by.png" alt="" onerror="this.style.display='none'"></div>
+    </div>
+    <div>
+      <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af; font-weight:700; margin:0 0 12px;">Supported By</p>
+      <div class="photo-slot" style="height:48px; width:140px; border-radius:6px;"><div class="filename">photos/supported-by.png</div><img class="real" src="photos/supported-by.png" alt="" onerror="this.style.display='none'"></div>
+    </div>
+    <div>
+      <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af; font-weight:700; margin:0 0 12px;">Pavilion Host</p>
+      <div class="photo-slot" style="height:48px; width:140px; border-radius:6px;"><div class="filename">photos/pavilion-host.png</div><img class="real" src="photos/pavilion-host.png" alt="" onerror="this.style.display='none'"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== HERO PHOTOS ===================== -->
+<div class="wrap" style="padding:20px 20px; border-bottom:1px solid #f3f4f6;">
+  <div style="display:flex; gap:8px; overflow-x:auto;">
+    <div class="photo-slot" style="height:160px; width:224px; flex-shrink:0; border-radius:12px;"><div class="filename">photos/hero-1.jpg</div><img class="real" src="photos/hero-1.jpg" alt="" onerror="this.style.display='none'"></div>
+    <div class="photo-slot" style="height:160px; width:224px; flex-shrink:0; border-radius:12px;"><div class="filename">photos/hero-2.jpg</div><img class="real" src="photos/hero-2.jpg" alt="" onerror="this.style.display='none'"></div>
+    <div class="photo-slot" style="height:160px; width:224px; flex-shrink:0; border-radius:12px;"><div class="filename">photos/hero-3.jpg</div><img class="real" src="photos/hero-3.jpg" alt="" onerror="this.style.display='none'"></div>
+  </div>
+</div>
+
+<!-- ===================== SECTION NAV ===================== -->
+<div style="position:sticky; top:0; z-index:40; background:rgba(255,255,255,0.95); backdrop-filter:blur(4px); border-bottom:1px solid #f3f4f6;">
+  <div class="wrap" style="display:flex; gap:6px; overflow-x:auto; padding:10px 20px;">
+    <a href="#numbers" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:var(--aibp-red); color:#fff; text-decoration:none;">Overview</a>
+    <a href="#speakers" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Speakers</a>
+    <a href="#awards" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Awards</a>
+    <a href="#day-1" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Day 1</a>
+    <a href="#day-2" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Day 2</a>
+    <a href="#networking" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Networking</a>
+    <a href="#participants" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Participants</a>
+    <a href="#sponsors" style="flex-shrink:0; padding:6px 12px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; background:#f3f4f6; color:#6b7280; text-decoration:none;">Sponsors</a>
+  </div>
+</div>
+
+<!-- ===================== SECTION BANNER (reused pattern) ===================== -->
+<!-- Real gradient bar style from SectionBanner(): logo chip left, title centred, date/venue right -->
+
+<!-- ===================== OVERVIEW / STATS — real ===================== -->
+<section id="numbers" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="position:relative; z-index:10; padding:22px 20px; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+      <div style="background:#fff; border-radius:8px; padding:6px 10px;"><img src="https://images.squarespace-cdn.com/content/v1/6316ec4bc3127239ee7b0786/34cc06e3-f859-40f8-8c01-f758906ce1c9/AIBP+by+Industry+Platform+%28High+Res%29.png?format=300w" alt="AIBP" style="height:18px; object-fit:contain;"></div>
+      <div style="text-align:center; flex:1;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Participants Overview</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">By the numbers</p></div>
+      <div style="text-align:right; flex-shrink:0;"><p style="color:#fff; font-weight:700; font-size:13px; margin:0;">26–27 August 2026</p><p style="color:rgba(255,255,255,0.7); font-size:11px; margin:0;">Jakarta, Indonesia</p></div>
+    </div>
+  </div>
+  <div style="position:relative; overflow:hidden; background:#111827;">
+    <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6), rgba(0,0,0,0.8));"></div>
+    <div class="wrap" style="position:relative; z-index:10; padding:48px 20px;">
+      <!-- 2026 official figures, as supplied — same 3-badge layout as Malaysia (Attendees / Companies / a headline %) -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:56px;">
+        <div style="text-align:center;"><div style="width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:20px;">👥</div><p style="color:#fff; font-size:32px; font-weight:800; margin:0;">347</p><p style="color:rgba(255,255,255,0.7); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; font-weight:700; margin:4px 0 0;">Attendees</p></div>
+        <div style="text-align:center;"><div style="width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:20px;">🏢</div><p style="color:#fff; font-size:32px; font-weight:800; margin:0;">135</p><p style="color:rgba(255,255,255,0.7); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; font-weight:700; margin:4px 0 0;">Companies</p></div>
+        <div style="text-align:center;"><div style="width:56px; height:56px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:20px;">🎯</div><p style="color:#fff; font-size:32px; font-weight:800; margin:0;">80%</p><p style="color:rgba(255,255,255,0.7); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; font-weight:700; margin:4px 0 0;">Buyer Ratio</p></div>
+      </div>
+
+      <!-- Row 1: Seniority (icon rows, narrow) + Industry (bar chart, wide) — mirrors Malaysia's exact pairing -->
+      <div style="display:grid; grid-template-columns:1fr 2fr; gap:32px; margin-bottom:40px;">
+        <div>
+          <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(255,255,255,0.6); font-weight:700; margin:0 0 16px;">By Seniority</p>
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div style="display:flex; align-items:center; gap:16px;"><div style="width:48px; height:48px; border-radius:50%; border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">🎩</div><div><p style="color:#fff; font-size:24px; font-weight:800; margin:0; line-height:1;">42%</p><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:4px 0 0;">C-Suite / VPs</p></div></div>
+            <div style="display:flex; align-items:center; gap:16px;"><div style="width:48px; height:48px; border-radius:50%; border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">📋</div><div><p style="color:#fff; font-size:24px; font-weight:800; margin:0; line-height:1;">18%</p><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:4px 0 0;">Manager / AVP</p></div></div>
+            <div style="display:flex; align-items:center; gap:16px;"><div style="width:48px; height:48px; border-radius:50%; border:2px solid rgba(255,255,255,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:16px;">🛠️</div><div><p style="color:#fff; font-size:24px; font-weight:800; margin:0; line-height:1;">40%</p><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:4px 0 0;">Specialists</p></div></div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(255,255,255,0.6); font-weight:700; margin:0 0 16px;">By Industry</p>
+          <div style="display:grid; grid-template-columns:7rem 1fr; gap:10px 12px; align-items:center;">
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">BFSI</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:85%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">34%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Industrials</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:82.5%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">33%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Public Services</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:32.5%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">13%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">DTLF</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:25%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">10%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Retail, RE &amp; Hosp.</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:12.5%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">5%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Telecoms</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:12.5%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">5%</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Function (Business/IT) + IT sub-function — second breakdown pair -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+        <div>
+          <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(255,255,255,0.6); font-weight:700; margin:0 0 16px;">By Function</p>
+          <div style="display:grid; grid-template-columns:5rem 1fr; gap:10px 12px; align-items:center;">
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Business</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:55.7%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">39%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">IT</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:87.1%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">61%</span></div></div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:rgba(255,255,255,0.6); font-weight:700; margin:0 0 16px;">By IT Function</p>
+          <div style="display:grid; grid-template-columns:6rem 1fr; gap:10px 12px; align-items:center;">
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">General IT</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:87.1%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">61%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Cyber</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:30%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">21%</span></div></div>
+            <span style="color:rgba(255,255,255,0.8); font-size:12px; text-align:right; font-style:italic;">Data &amp; AI</span>
+            <div style="position:relative; height:20px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="position:absolute; inset-y:0; left:0; width:25.7%; background:#fff; border-radius:3px; display:flex; align-items:center; justify-content:flex-end; padding-right:6px;"><span style="font-size:10px; font-weight:700; color:#111827;">18%</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <p style="color:rgba(255,255,255,0.5); font-size:11px; font-style:italic; margin:32px 0 0; text-align:center;">2026 figures as supplied. Registration/check-in data pulled from Firebase earlier (599 records, mostly Day 1) is a separate, broader attendee list than this official participant count — using the official numbers here per your table.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPEAKERS — real (32), added section, styled to match ===================== -->
+<section id="speakers" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Confirmed Speakers</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">32 industry leaders</p></div>
+  </div>
+  <div class="wrap" style="padding:40px 20px; background:#fff;">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Anggia Agrimiradj</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Vice President Digital Wholesale Strategy &amp; Innovation, Bank Rakyat Indonesia (BRI)</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Anindio Daneswara</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Group Head of Technology, Digitalization, &amp; Process Excellence, Semen Indonesia Group (SIG)</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Anthony Treyvaud</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">APAC Channel Manager, Concentric AI</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Arief Noorman</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of Cyber Risk Division and Data Protection Officer, Allo Bank</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Arief Ristanto</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Cybersecurity Head, Astra International</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Bondan Widiawan</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Deputy for Cybersecurity and Cryptography Operations, BSSN</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Brikson Hara Donald Barus</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Department Head AI Development, Bank Mandiri</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Chairul Saleh</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director of Manpower Productivity, Coordinating Ministry for Economic Affairs of the Republic of Indonesia</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">David Carless</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Vice President, Asia Pacific, India &amp; Japan, Kong Inc.</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Derek Lim</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Regional Director, ASEAN, Tricentis</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Dr. Fandi P. Nurzaman</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Senior Planner, Ministry of National Development Planning (BAPPENAS)</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Edy Susanto</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director of IT, Trans Retail Indonesia</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Fahrul Muttaqin</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of People Management Information System, Telkomsel</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Faisha Shahriman</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of Risk &amp; Resilience, PLUS Malaysia Berhad</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Gabriel Kusuma</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of Think Tank, Golden Energy Mines</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Handika Hakim</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of AI &amp; Data Analytics Division, Bank Negara Indonesia (BNI)</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Hendy Gunawan</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">SVP, Enterprise Data Governance, Bank Sinarmas</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Heriyanto Agung Putra</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director and Chief Human Capital Officer, VALE</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Herman Cahyadi</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Head of People, Gojek</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Ignatius Sigit Pratopo</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">SVP of Pertamina Digital Hub, Pertamina</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Inka Yusgiantoro</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Advisor Transformation, Otoritas Jasa Keuangan (OJK)</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Kemal Hadid</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director Manufacturing, Mattel</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Nahdatul Choir</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">General Manager - People Enabler Management, Telkomsel</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Newin Atmarumeksa</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Technical Consultant, Veeam</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Ni Made Sunarti</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">SVP Data Management, CIMB Niaga</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Norman Sasono</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Chief Technology Officer, DANA</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Renaldi Tjahaya</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director IT &amp; CRM, Kawan Lama Group</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Risman Adnan</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Chief Technology Officer, ParagonCorp</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Victor Lesmana</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Director, Bukalapak</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Victor Lim</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Regional Director, softScheck</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Willis Lim</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Executive Director, CyberSG Talent, Innovation and Growth (TIG) Collaboration Centre</p></div>
+      <div style="border:1px solid #f3f4f6; border-radius:12px; padding:14px;"><p style="font-weight:700; font-size:13px; margin:0;">Yudi Adicawarman</p><p style="font-size:11px; color:#9ca3af; margin:4px 0 0;">Country Manager – Indonesia, Tricentis</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AWARDS — real "coming soon" placeholder, exact site pattern ===================== -->
+<section id="awards" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Award Winners</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">Recognition</p></div>
+  </div>
+  <div style="padding:64px 20px; text-align:center; background:#fff;">
+    <p style="font-size:14px; color:#374151; font-weight:700; margin:0 0 8px;">Indonesia Enterprise Innovation Awards</p>
+    <p style="font-size:13px; color:#9ca3af; margin:0; max-width:520px; margin-left:auto; margin-right:auto;">The Enterprise Innovation Awards recognise enterprises that have embarked on digital transformation initiatives. Two enterprises will be crowned winners — results are still being finalised, check back soon.</p>
+  </div>
+</section>
+
+<!-- ===================== DAY 1 / DAY 2 — real "coming soon" placeholder ===================== -->
+<section id="day-1" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Day 1</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">26 August 2026</p></div>
+  </div>
+  <div style="padding:32px 20px; background:#f9fafb;">
+<div class="wrap">
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">08:00</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Breakfast &amp; Networking</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">09:00</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Welcome Address</p><p style="font-size:12px; color:#6b7280; margin:0;">Irza Suprapto, CFA, CEO, ASEAN Innovation Business</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">09:10</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Government Keynote: Anchoring Southeast Asia&#x27;s Digital Growth Engine for the Next Chapter</p><p style="font-size:12px; color:#6b7280; margin:0;">Dr. Edwin Hidayat Abdullah, Director General of ...</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">09:25</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Indonesia Enterprise Innovation Awards</p></div>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">ECONOMICS OF AI TRANSFORMATION</h3>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">09:35</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Keynote Panel: The Economics of Enterprise AI</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Ignatius Sigit Pratopo</strong>, SVP of Pertamina Digital Hub, Pertamina<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Anindio Daneswara</strong>, Group Head of Technology, Digitalization, &amp; Process Excellence, Semen Indonesia Group (SIG)</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">10:20</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Networking Break</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">10:30</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Private Roundtable: The Hidden Line Item — What Unreliable AI Actually Costs (invite-only)</p></div>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">DATA AMBITION TO DATA CONTROL</h3>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">11:30</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">From 514 Cities to One Catalogue: Data Readiness Is the Real AI Readiness</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Dr. Fandi P. Nurzaman</strong>, Senior Planner, Ministry of National Development Planning (BAPPENAS)</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">11:45</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">From Ambition to Control: A Resilience Playbook for Indonesia&#8217;s Regulatory Reality</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Newin Atmarumeksa</strong>, Technical Consultant, Veeam</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">12:00</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Panel: Who Owns the Data When Everyone Needs It?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Ni Made Sunarti</strong>, SVP Data Management, CIMB Niaga<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Hendy Gunawan</strong>, SVP, Enterprise Data Governance, Bank Sinarmas<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Brikson Hara Donald Barus</strong>, Department Head AI Development, Bank Mandiri</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">12:45</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Networking Lunch</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">12:45</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Private Roundtable: Beyond the AI Pilot — Why Orchestration is the Missing Layer (hosted by Workato)</p></div>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">GOVERNING AI WITHOUT SLOWING IT DOWN</h3>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">14:05</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Designing AI Governance That Scales Across Business Units</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Inka Yusgiantoro</strong>, Advisor Transformation, Otoritas Jasa Keuangan (OJK)</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">14:20</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">From Principle to Proof: Making AI Oversight Auditable Before the Regulator Asks</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Derek Lim</strong>, Regional Director, ASEAN, Tricentis</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">14:35</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Panel: How Much Oversight Is Enough as AI Scales Across the Enterprise?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Gabriel Kusuma</strong>, Head of Think Tank, Golden Energy Mines<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Kemal Hadid</strong>, Director Manufacturing, Mattel<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Victor Lesmana</strong>, Director, Bukalapak<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Handika Hakim</strong>, Head of AI &amp; Data Analytics Division, Bank Negara Indonesia (BNI)<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Yudi Adicawarman</strong>, Country Manager – Indonesia, Tricentis</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">15:15</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Lightning Showcase: SG Cyber Flash — Next-Gen Enterprise Defenses</p><p style="font-size:12px; color:#6b7280; margin:0;">softScheck | ThreatBook</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">15:15</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Private Workshop: Securing Indonesia&#8217;s Digital Economy — Trust, AI &amp; Resilience (closed-door roundtable)</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">16:15</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Lucky Draw</p></div>
+<div style="background:#fff; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:11px; color:#9ca3af; font-weight:700; margin:0 0 4px;">16:30</p><p style="font-size:14px; font-weight:700; margin:0 0 6px;">End of Day 1</p></div>
+</div></div>
+</section>
+<section id="day-2" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Day 2</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">27 August 2026</p></div>
+  </div>
+  <div style="padding:32px 20px; background:#fff;">
+<div class="wrap">
+<p style="font-size:12px; color:#9ca3af; font-style:italic; margin:0 0 20px;">Exact session times for Day 2 are pending from the agenda sheet — sessions below are shown in confirmed running order.</p>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">CYBER RISK IN AN AI-DRIVEN ENTERPRISE</h3>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Panel: Is Your Cyber Strategy Designed for an AI-First Enterprise?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Arief Noorman</strong>, Head of Cyber Risk Division and Data Protection Officer, Allo Bank<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Edy Susanto</strong>, Director of IT, Trans Retail Indonesia<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Arief Ristanto</strong>, Cybersecurity Head, Astra International</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">How AI Changes the Threat Model for Enterprises</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Bondan Widiawan</strong>, Deputy for Cybersecurity and Cryptography Operations, BSSN</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Securing the Data That Powers AI</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Anthony Treyvaud</strong>, APAC Channel Manager, Concentric AI</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">What Singapore Learned: Building Trusted Adoption in an Interconnected Economy</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Willis Lim</strong>, Executive Director, CyberSG Talent, Innovation and Growth (TIG) Collaboration Centre</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Cyber Risk in an AI-Driven Enterprise</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Moderator:</span> <strong>Victor Lim</strong>, Regional Director, softScheck</p></div>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">WHEN AI ACTS ON YOUR BEHALF</h3>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Panel: If an AI Agent Makes the Wrong Call, Who Owns the Outcome?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Norman Sasono</strong>, Chief Technology Officer, DANA<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Renaldi Tjahaya</strong>, Director IT &amp; CRM, Kawan Lama Group<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Risman Adnan</strong>, Chief Technology Officer, ParagonCorp</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Lessons from Malaysia&#8217;s Digital Tolling Journey: From Risk Oversight to Responsible Innovation</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Faisha Shahriman</strong>, Head of Risk &amp; Resilience, PLUS Malaysia Berhad</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Unleash AI Connectivity</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>David Carless</strong>, Vice President, Asia Pacific, India &amp; Japan, Kong Inc.</p></div>
+<h3 style="margin:32px 0 16px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.08em; color:var(--aibp-red); border-bottom:2px solid var(--aibp-red); padding-bottom:8px;">FROM DIGITAL TRANSFORMATION TO ENTERPRISE RESILIENCE</h3>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Panel: As AI Rewrites the Work, Who Manages the People Risk?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Herman Cahyadi</strong>, Head of People, Gojek<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Nahdatul Choir</strong>, General Manager - People Enabler Management, Telkomsel<br><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Chairul Saleh</strong>, Director of Manpower Productivity, Coordinating Ministry for Economic Affairs of the Republic of Indonesia</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">AI Is Rewriting the Work. Who&#x27;s Managing the People Risk?</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Panelist:</span> <strong>Fahrul Muttaqin</strong>, Head of People Management Information System, Telkomsel</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Building a Trusted Digital Bank: BRI&#x27;s Enterprise Transformation and AI Journey</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Anggia Agrimiradj</strong>, Vice President Digital Wholesale Strategy &amp; Innovation, Bank Rakyat Indonesia (BRI)</p></div>
+<div style="background:#f9fafb; border:1px solid #f3f4f6; border-radius:12px; padding:16px 18px; margin-bottom:10px;"><p style="font-size:14px; font-weight:700; margin:0 0 6px;">Building a High Performing Organisation in the Digital Era Human Capital</p><p style="font-size:12px; color:#6b7280; margin:0; line-height:1.7;"><span style="color:var(--aibp-red); font-weight:700;">Speaker:</span> <strong>Heriyanto Agung Putra</strong>, Director and Chief Human Capital Officer, VALE</p></div>
+</div></div>
+</section>
+
+<!-- ===================== NETWORKING — real (5 sessions) ===================== -->
+<section id="networking" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Curated Meetings &amp; Introductions</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">Networking &amp; private sessions</p></div>
+  </div>
+  <div class="wrap" style="padding:40px 20px; background:#f9fafb;">
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+      <div style="background:#fff; border:1px solid #f3f4f6; border-radius:16px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.04);">
+        <p style="font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--aibp-red); font-weight:700; margin:0 0 4px;">Roundtable</p>
+        <h3 style="font-size:16px; font-weight:700; margin:0 0 8px;">Strategic AI &amp; IT Investments — Driving Business Resilience</h3>
+        <p style="font-size:11px; color:#9ca3af; margin:0 0 8px;">26 August, 10:45–11:45</p>
+        <p style="font-size:11px; color:#9ca3af; margin:0;">13 participants — PT Pefindo Biro Kredit IdScore, CIMB Niaga, PT Pertamina (Persero), PT PLN and more</p>
+      </div>
+      <div style="background:#fff; border:1px solid #f3f4f6; border-radius:16px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.04);">
+        <p style="font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--aibp-red); font-weight:700; margin:0 0 4px;">Private Lunch</p>
+        <h3 style="font-size:16px; font-weight:700; margin:0 0 8px;">AI for Cybersecurity — Fighting AI with AI</h3>
+        <p style="font-size:11px; color:#9ca3af; margin:0 0 8px;">26 August, 13:00–14:00</p>
+        <p style="font-size:11px; color:#9ca3af; margin:0;">16 participants — APP Group, PT PLN (Persero), Golden Energy Mines, PT Telkom Indonesia and more</p>
+      </div>
+      <div style="background:#fff; border:1px solid #f3f4f6; border-radius:16px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.04);">
+        <p style="font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--aibp-red); font-weight:700; margin:0 0 4px;">Workshop</p>
+        <h3 style="font-size:16px; font-weight:700; margin:0 0 8px;">Private Networking Reception for AI &amp; Cyber Leaders</h3>
+        <p style="font-size:11px; color:#9ca3af; margin:0 0 8px;">26 August, 15:25–16:25</p>
+        <p style="font-size:11px; color:#9ca3af; margin:0;">17 participants — Prudential Life Assurance Indonesia, Seabank, Bank Syariah Indonesia and more</p>
+      </div>
+      <div style="background:#fff; border:1px solid #f3f4f6; border-radius:16px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.04); opacity:0.6;">
+        <p style="font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--aibp-red); font-weight:700; margin:0 0 4px;">Workshop</p>
+        <h3 style="font-size:16px; font-weight:700; margin:0 0 8px;">Securing the Backbone — Cyber Resilience for Critical Infrastructure</h3>
+        <p style="font-size:11px; color:#9ca3af; margin:0 0 8px;">27 August, 10:30–11:30</p>
+        <p style="font-size:11px; color:#c66; margin:0;">0 attendance recorded — same Day 2 sync gap as the stats above, not necessarily accurate</p>
+      </div>
+      <div style="background:#fff; border:1px solid #f3f4f6; border-radius:16px; padding:18px; box-shadow:0 1px 2px rgba(0,0,0,0.04); opacity:0.6;">
+        <p style="font-size:10px; text-transform:uppercase; letter-spacing:0.05em; color:var(--aibp-red); font-weight:700; margin:0 0 4px;">Lunch Workshop</p>
+        <h3 style="font-size:16px; font-weight:700; margin:0 0 8px;">AI Guardrails for Enterprise — Protecting Data While Enabling Innovation</h3>
+        <p style="font-size:11px; color:#9ca3af; margin:0 0 8px;">27 August, 12:35–14:00</p>
+        <p style="font-size:11px; color:#c66; margin:0;">0 attendance recorded — same Day 2 sync gap as the stats above, not necessarily accurate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PARTICIPANTS — real "coming soon" placeholder ===================== -->
+<section id="participants" style="border-bottom:1px solid #f3f4f6;">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Participants</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">Who was in the room</p></div>
+  </div>
+  <div style="padding:64px 20px; text-align:center; background:#fff;"><p style="font-size:13px; color:#9ca3af; margin:0;">599 real attendee registrations across 328 companies exist in Firebase but aren't wired into a searchable directory yet — same feature as the Malaysia report's Participants tab.</p></div>
+</section>
+
+<!-- ===================== SPONSORS — real (17), exact tier-grid style ===================== -->
+<section id="sponsors">
+  <div style="position:relative; overflow:hidden; background:linear-gradient(to right, #131a3a, #2e3d80, #4B64AE);">
+    <div class="wrap" style="padding:22px 20px; text-align:center;"><h2 style="color:#fff; font-weight:800; font-size:20px; margin:0;">Partners &amp; Sponsors</h2><p style="color:rgba(255,255,255,0.7); font-size:12px; margin:2px 0 0;">With thanks to</p></div>
+  </div>
+  <div class="wrap" style="padding:48px 20px; text-align:center; background:#f9fafb;">
+
+    <p style="font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; margin:0 0 20px; color:#8E9AAF;">Platinum Sponsor</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:40px;">
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;">
+        <div class="filename">photos/sponsor-tricentis.png</div><img class="real" src="photos/sponsor-tricentis.png" alt="" onerror="this.style.display='none'">
+        <span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700; padding:0 4px; background:transparent;">Tricentis</span>
+      </div>
+    </div>
+
+    <p style="font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; margin:0 0 20px; color:#D4AF37;">Gold Sponsor</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:40px;">
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;">
+        <div class="filename">photos/sponsor-concentric-ai.png</div><img class="real" src="photos/sponsor-concentric-ai.png" alt="" onerror="this.style.display='none'">
+        <span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700; padding:0 4px;">Concentric AI</span>
+      </div>
+    </div>
+
+    <p style="font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; margin:0 0 20px; color:#9DA1A3;">Silver Sponsors</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:40px;">
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;"><div class="filename">photos/sponsor-veeam.png</div><img class="real" src="photos/sponsor-veeam.png" alt="" onerror="this.style.display='none'"><span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700;">Veeam Software</span></div>
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;"><div class="filename">photos/sponsor-kong.png</div><img class="real" src="photos/sponsor-kong.png" alt="" onerror="this.style.display='none'"><span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700;">Kong</span></div>
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;"><div class="filename">photos/sponsor-workato.png</div><img class="real" src="photos/sponsor-workato.png" alt="" onerror="this.style.display='none'"><span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700;">Workato</span></div>
+    </div>
+
+    <p style="font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; margin:0 0 20px; color:#C17F3E;">AI Security Partner</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px; margin-bottom:40px;">
+      <div class="photo-slot" style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:140px;"><div class="filename">photos/sponsor-terminal3.png</div><img class="real" src="photos/sponsor-terminal3.png" alt="" onerror="this.style.display='none'"><span style="position:relative; z-index:1; font-size:12px; color:#9ca3af; font-weight:700;">TERMINAL 3</span></div>
+    </div>
+
+    <p style="font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.2em; margin:0 0 20px; color:#555;">Exhibitors</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">E-CQurity</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">SoftScheck Singapore</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Netrust</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Spentera</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">ThreatBook</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Gaincontrol</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Digify</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Blackscore</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">CyberKnights</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">Zeroport</span></div>
+      <div style="display:flex; align-items:center; justify-content:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; width:220px; height:110px;"><span style="font-size:12px; color:#9ca3af; font-weight:700; text-align:center; padding:0 8px;">AxisNow</span></div>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:40px 20px; text-align:center; border-top:1px solid #f3f4f6; background:#111827;">
+  <p style="font-size:12px; color:#9ca3af; line-height:1.6; max-width:420px; margin:0 auto;">AIBP serves as an avenue for public and private organisations in Southeast Asia to access and exchange information about growth and innovation within the B2B space.</p>
+  <p style="font-size:12px; color:#6b7280; margin-top:12px;">aibp@industry-platform.com · www.aibp.sg</p>
+</footer>
+
+</body>
+</html>
