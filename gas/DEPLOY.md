@@ -8,11 +8,11 @@
 6. Execute as: Me
 7. Who has access: Anyone
 8. Click Deploy → Copy the Web App URL
-9. In Vercel (the `aibp-ce-post-id` project), set env var `REPORT_GAS_URL` to
+9. In Vercel (the `aibp-ce-post-th` project), set env var `REPORT_GAS_URL` to
    that URL, then redeploy the site
 
 No `createReportSpreadsheet` step is needed — `REPORT_SHEET_ID` at the top of
-`gas/Report.gs` already points at the real "CEID_Report_Content" sheet.
+`gas/Report.gs` already points at the real "CETH_Report_Content" sheet.
 
 ## Testing the endpoint
 

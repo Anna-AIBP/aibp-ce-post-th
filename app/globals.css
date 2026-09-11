@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --aibp-red:   #4B64AE; /* Indonesia Blue, per AIBP brand guide */
+  --aibp-red:   #834924; /* Thailand Brown, per AIBP brand guide */
   --aibp-dark:  #3C3838;
   --aibp-gold:  #C9A84C;
   --background: #ffffff;
