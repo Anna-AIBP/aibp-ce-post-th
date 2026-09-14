@@ -977,8 +977,15 @@ export default function ReportView({ data }: { data: ReportData }) {
                   <p className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">{group.label}</p>
                   <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 sm:gap-5">
                     {group.logos.map((logo) => (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img key={logo.name} src={logo.url} alt={logo.name} className={`${logo.h ?? 'h-12 sm:h-14'} w-auto max-w-[150px] object-contain`} />
+                      // Fixed-size box per logo (not just a fixed height) so a
+                      // squarish badge/seal doesn't render bigger or smaller
+                      // than a wide wordmark just because of its own aspect
+                      // ratio or built-in padding — same treatment as the
+                      // Featuring/Sponsors logo rows below.
+                      <div key={logo.name} className={`${logo.h ?? 'h-12 sm:h-14'} w-[130px] sm:w-[150px] flex items-center justify-center`}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={logo.url} alt={logo.name} className="max-h-full max-w-full object-contain" />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -1420,8 +1427,10 @@ export default function ReportView({ data }: { data: ReportData }) {
                         <h3 className="text-lg font-bold text-gray-900 leading-snug">{n.title}</h3>
                       </div>
                       {n.coHostLogo && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={n.coHostLogo} alt="" className="h-8 sm:h-10 w-auto max-w-[100px] object-contain flex-shrink-0" />
+                        <div className="h-8 sm:h-10 w-[90px] sm:w-[100px] flex items-center justify-center flex-shrink-0">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={n.coHostLogo} alt="" className="max-h-full max-w-full object-contain" />
+                        </div>
                       )}
                     </div>
                     {n.coHostedWith && <p className="text-xs text-gray-400 mb-3">Co-hosted with {n.coHostedWith}</p>}
