@@ -119,6 +119,7 @@ const TIER_SECTION_LABELS: Record<string, string> = {
   'WORKSHOP PARTNER': 'Workshop Partners',
   'AI SECURITY PARTNER': 'AI Security Partners',
   'PAVILION HOST': 'Pavilion Hosts',
+  'SUPPORTING ORGANISATION': 'Supporting Organisations',
   EXHIBITOR: 'Exhibitors',
 }
 // Plural section label only when a tier actually has more than one sponsor
@@ -127,7 +128,7 @@ function tierSectionLabel(tier: string, count: number) {
   const label = TIER_SECTION_LABELS[tier] || tier
   return count === 1 ? label.replace(/s$/, '') : label
 }
-const TIER_ORDER = ['PLATINUM', 'GOLD', 'SILVER', 'BRONZE', 'WORKSHOP PARTNER', 'AI SECURITY PARTNER', 'PAVILION HOST', 'EXHIBITOR']
+const TIER_ORDER = ['PLATINUM', 'GOLD', 'SILVER', 'BRONZE', 'WORKSHOP PARTNER', 'AI SECURITY PARTNER', 'PAVILION HOST', 'SUPPORTING ORGANISATION', 'EXHIBITOR']
 // Per-tier title colour, matching the sponsor wall style used on the public site.
 const TIER_COLORS: Record<string, string> = {
   PLATINUM: '#7C8798',
@@ -137,6 +138,7 @@ const TIER_COLORS: Record<string, string> = {
   'WORKSHOP PARTNER': '#C17F3E',
   'AI SECURITY PARTNER': '#C17F3E',
   'PAVILION HOST': '#C17F3E',
+  'SUPPORTING ORGANISATION': '#C17F3E',
 }
 const DEFAULT_TIER_COLOR = '#555555'
 

@@ -117,6 +117,7 @@ function normalizeSponsorTier(raw) {
   if (t.indexOf('WORKSHOP') !== -1) return 'WORKSHOP PARTNER';
   if (t.indexOf('AI SECURITY') !== -1) return 'AI SECURITY PARTNER';
   if (t.indexOf('PAVILION') !== -1) return 'PAVILION HOST';
+  if (t.indexOf('SUPPORTING') !== -1) return 'SUPPORTING ORGANISATION';
   return 'EXHIBITOR';
 }
 
