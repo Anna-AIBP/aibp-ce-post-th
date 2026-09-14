@@ -36,7 +36,7 @@ const EVENT_DEFAULTS = {
   eventName: '55th AIBP Conference & Exhibition Thailand',
   day1: '2026-09-02',
   day2: '2026-09-03',
-  venue: 'W Hotel Bangkok, 106 N S Sathon Rd, Si Lom, Bang Rak, Bangkok 10500, Thailand'
+  venue: 'W Hotel Bangkok'
 };
 
 function doGet(e) {

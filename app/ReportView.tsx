@@ -288,8 +288,10 @@ function SectionNav({ items }: { items: { id: string; label: string }[] }) {
 }
 
 // The repeating gradient banner that opens every content page in the source
-// PDF — logo chip on the left, section title centred, date/venue on the
-// right (hidden on small screens to keep the bar from wrapping).
+// PDF — logo chip on the left, section title truly centred (3-equal-column
+// grid, not flex-1, so an uneven-width venue string on the right doesn't
+// visually drag the title off-centre), date/venue on the right (hidden on
+// small screens to keep the bar from wrapping).
 function SectionBanner({ title, subtitle, meta }: { title: string; subtitle?: string; meta: ReportMeta }) {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-[#241509] via-[#5C3319] to-[#834924]">
@@ -297,18 +299,22 @@ function SectionBanner({ title, subtitle, meta }: { title: string; subtitle?: st
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{ backgroundImage: 'linear-gradient(115deg, transparent 46%, rgba(255,255,255,0.5) 50%, transparent 54%)' }}
       />
-      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-10 py-5 sm:py-7 flex items-center justify-between gap-4">
-        <div className="bg-white rounded-lg px-2.5 py-1.5 flex-shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={AIBP_LOGO} alt="AIBP" className="h-4 sm:h-5 object-contain" />
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-10 py-5 sm:py-7 grid grid-cols-3 items-center gap-4">
+        <div className="flex justify-start">
+          <div className="bg-white rounded-lg px-2.5 py-1.5 flex-shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={AIBP_LOGO} alt="AIBP" className="h-4 sm:h-5 object-contain" />
+          </div>
         </div>
-        <div className="text-center flex-1 min-w-0">
+        <div className="text-center min-w-0">
           <h2 className="text-white font-extrabold text-base sm:text-2xl leading-tight truncate">{title}</h2>
           {subtitle && <p className="text-white/70 text-[11px] sm:text-sm mt-0.5 truncate">{subtitle}</p>}
         </div>
-        <div className="text-right flex-shrink-0 hidden sm:block">
-          <p className="text-white font-bold text-sm whitespace-nowrap">{fmtDateRange(meta.day1, meta.day2)}</p>
-          <p className="text-white/70 text-xs whitespace-nowrap">{meta.venue}</p>
+        <div className="hidden sm:flex justify-end">
+          <div className="text-right flex-shrink-0">
+            <p className="text-white font-bold text-sm whitespace-nowrap">{fmtDateRange(meta.day1, meta.day2)}</p>
+            <p className="text-white/70 text-xs whitespace-nowrap">{meta.venue}</p>
+          </div>
         </div>
       </div>
     </div>
