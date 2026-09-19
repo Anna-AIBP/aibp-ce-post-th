@@ -290,10 +290,16 @@ function SectionNav({ items }: { items: { id: string; label: string }[] }) {
 }
 
 // The repeating gradient banner that opens every content page in the source
-// PDF — logo chip on the left, section title truly centred (3-equal-column
-// grid, not flex-1, so an uneven-width venue string on the right doesn't
-// visually drag the title off-centre), date/venue on the right (hidden on
-// small screens to keep the bar from wrapping).
+// PDF — logo chip on the left, date/venue on the right (hidden on small
+// screens to keep the bar from wrapping), section title absolutely centred
+// as a separate overlay layer rather than a 3-equal-column grid cell. A grid
+// cell caps the title to a strict 1/3 of the banner width, which truncates
+// a longer title (e.g. "Curated Meetings & Introductions" was clipping to
+// "Curated Meetings & Intr…") purely because of how little room its own
+// column gets, even though there's plenty of visually empty space around
+// it. Overlaying the title lets it use most of the banner's width while
+// staying mathematically centred, independent of the logo/date content on
+// either side.
 function SectionBanner({ title, subtitle, meta }: { title: string; subtitle?: string; meta: ReportMeta }) {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-[#241509] via-[#5C3319] to-[#834924]">
@@ -301,21 +307,24 @@ function SectionBanner({ title, subtitle, meta }: { title: string; subtitle?: st
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{ backgroundImage: 'linear-gradient(115deg, transparent 46%, rgba(255,255,255,0.5) 50%, transparent 54%)' }}
       />
-      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-10 py-5 sm:py-7 grid grid-cols-3 items-center gap-4">
-        <div className="flex justify-start">
+      <div className="relative z-10 max-w-5xl mx-auto px-5 sm:px-10 py-5 sm:py-7">
+        <div className="flex items-center justify-between gap-4">
           <div className="bg-white rounded-lg px-2.5 py-1.5 flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={AIBP_LOGO} alt="AIBP" className="h-4 sm:h-5 object-contain" />
           </div>
-        </div>
-        <div className="text-center min-w-0">
-          <h2 className="text-white font-extrabold text-base sm:text-2xl leading-tight truncate">{title}</h2>
-          {subtitle && <p className="text-white/70 text-[11px] sm:text-sm mt-0.5 truncate">{subtitle}</p>}
-        </div>
-        <div className="hidden sm:flex justify-end">
-          <div className="text-right flex-shrink-0">
+          <div className="hidden sm:block text-right flex-shrink-0">
             <p className="text-white font-bold text-sm whitespace-nowrap">{fmtDateRange(meta.day1, meta.day2)}</p>
             <p className="text-white/70 text-xs whitespace-nowrap">{meta.venue}</p>
+          </div>
+        </div>
+        {/* Centred overlay — sized off the row's own box (position:relative
+            above), not the outer full-width gradient, so it lines up with
+            the logo/date row above. Side padding keeps it clear of both. */}
+        <div className="absolute inset-0 flex items-center justify-center px-16 sm:px-28 pointer-events-none">
+          <div className="text-center min-w-0 max-w-full">
+            <h2 className="text-white font-extrabold text-base sm:text-2xl leading-tight truncate">{title}</h2>
+            {subtitle && <p className="text-white/70 text-[11px] sm:text-sm mt-0.5 truncate">{subtitle}</p>}
           </div>
         </div>
       </div>
